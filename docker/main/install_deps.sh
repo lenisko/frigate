@@ -92,7 +92,7 @@ if [[ "${TARGETARCH}" == "amd64" ]]; then
     echo "deb [arch=amd64 signed-by=/usr/share/keyrings/intel-graphics.gpg] https://repositories.intel.com/gpu/ubuntu jammy client" | tee /etc/apt/sources.list.d/intel-gpu-jammy.list
     apt-get -qq update
     apt-get -qq install --no-install-recommends --no-install-suggests -y \
-        intel-media-va-driver-non-free libmfx1 libmfxgen1 libvpl2
+        intel-media-va-driver-non-free=24.3.3-996~22.04 libmfx1 libmfxgen1 libvpl2
 
     apt-get -qq install -y ocl-icd-libopencl1
 
